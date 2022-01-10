@@ -467,15 +467,13 @@ let bPrim = false;
 var map = _leafletDefault.default.map('map').setView([
     43.01195,
     -2.56789
-], 8);
-_leafletDefault.default.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+], 8.5);
+_leafletDefault.default.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 oMarker.forEach((b)=>{
     var marcador = _leafletDefault.default.marker([
         b.GpxY,
         b.GpxX
-    ]).bindPopup(b.Nombre).addTo(map).on("click", (b)=>{
+    ]).bindPopup(b.Nombre).addTo(map).on("click", (k)=>{
         if (!bPrim) {
             $("#dOpciones").slideDown(100);
             bPrim = !bPrim;
@@ -483,6 +481,10 @@ oMarker.forEach((b)=>{
             $("#dOpciones").slideToggle(50);
             $("#dOpciones").slideToggle(100);
         }
+        $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${b.Nombre}</p></div>
+            <button id="btnAñadirBaliza" class='btnOpciones' value='${b.Nombre}'>Añadir</button>
+            <button id="btnVerBaliza" class='btnOpciones' value='${b.Nombre}'>Ver</button>`);
+        $("#btnAñadirBaliza").on("click", addBaliza);
     });
 });
 
