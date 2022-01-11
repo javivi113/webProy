@@ -24,7 +24,7 @@
 64C:\Users\2daw3\proyecto\web\node_modules\nanoid\index.browser.js132787513500890000 0
 52C:\Users\2daw3\proyecto\web\node_modules\url\LICENSE132760069850080000 0
 67C:\Users\2daw3\proyecto\web\node_modules\public-encrypt\.travis.yml132760069885850000 0
-32C:\Users\2daw3\proyecto\web\dist132862923262005842 1
+32C:\Users\2daw3\proyecto\web\dist132863667700208798 1
 74C:\Users\2daw3\proyecto\web\node_modules\tough-cookie\lib\pubsuffix-psl.js132760069870850000 0
 55C:\Users\2daw3\proyecto\web\node_modules\balanced-match132846429430070542 1
 65C:\Users\2daw3\proyecto\web\node_modules\public-encrypt\readme.md132760069885850000 0
@@ -88,11 +88,11 @@
 64C:\Users\2daw3\proyecto\web\node_modules\object-is\test\index.js132760069892250000 0
 59C:\Users\2daw3\proyecto\web\node_modules\lodash\fp\assoc.js132760069827770000 0
 88C:\Users\2daw3\proyecto\web\node_modules\readable-stream\lib\internal\streams\destroy.js132760069775710000 0
-42C:\Users\2daw3\proyecto\web\src\index.html132862923261266364 0
+42C:\Users\2daw3\proyecto\web\src\index.html132863664881717537 0
 87C:\Users\2daw3\proyecto\web\node_modules\@parcel\transformer-js\lib\esmodule-helpers.js132814333265760000 0
 79C:\Users\2daw3\proyecto\web\node_modules\uri-js\dist\esnext\schemes\mailto.d.ts132760069906280000 0
 64C:\Users\2daw3\proyecto\web\node_modules\csso\lib\clean\utils.js132760069788650000 0
-54C:\Users\2daw3\proyecto\web\dist\index.6d8fae21.js.map132862922162811052 0
+54C:\Users\2daw3\proyecto\web\dist\index.6d8fae21.js.map132863664078985447 0
 65C:\Users\2daw3\proyecto\web\node_modules\eventemitter3\index.d.ts132760069817410000 0
 61C:\Users\2daw3\proyecto\web\node_modules\terser\dist\.gitkeep132823843247210000 0
 54C:\Users\2daw3\proyecto\web\node_modules\utility-types132846429445445540 1
@@ -114,7 +114,7 @@
 63C:\Users\2daw3\proyecto\web\node_modules\minimist\test\parse.js132760069763700000 0
 78C:\Users\2daw3\proyecto\web\node_modules\caniuse-lite\data\features\streams.js132846429371740000 0
 58C:\Users\2daw3\proyecto\web\node_modules\binary-extensions132846429430120482 1
-47C:\Users\2daw3\proyecto\web\src\style\main.sass132862923030267939 0
+47C:\Users\2daw3\proyecto\web\src\style\main.sass132862928462709056 0
 67C:\Users\2daw3\proyecto\web\node_modules\serve-handler\node_modules132846429415563813 1
 82C:\Users\2daw3\proyecto\web\node_modules\core-js\actual\number\min-safe-integer.js132846429373110000 0
 51C:\Users\2daw3\proyecto\web\node_modules\iconv-lite132846429434085535 1
@@ -157,7 +157,7 @@
 85C:\Users\2daw3\proyecto\web\node_modules\highlight.js\scss\atelier-estuary-light.scss132760069818900000 0
 59C:\Users\2daw3\proyecto\web\node_modules\terser\lib\size.js132823843247210000 0
 63C:\Users\2daw3\proyecto\web\node_modules\lodash\fp\upperCase.js132760069827770000 0
-52C:\Users\2daw3\proyecto\web\src\scripts\selecMapa.js132862923024065884 0
+52C:\Users\2daw3\proyecto\web\src\scripts\selecMapa.js132863667588223085 0
 99C:\Users\2daw3\proyecto\web\node_modules\postcss-modules-scope\node_modules\color-convert\README.md132760069781630000 0
 70C:\Users\2daw3\proyecto\web\node_modules\bootstrap\js\dist\dom\data.js132828232456470000 0
 80C:\Users\2daw3\proyecto\web\node_modules\caniuse-lite\data\features\classlist.js132846429371740000 0
@@ -175,7 +175,7 @@
 67C:\Users\2daw3\proyecto\web\node_modules\fast-json-stable-stringify132846429432570365 1
 55C:\Users\2daw3\proyecto\web\node_modules\iferr\iferr.js132760069776520000 0
 61C:\Users\2daw3\proyecto\web\node_modules\msgpackr\unpack.d.ts132846429368870000 0
-47C:\Users\2daw3\proyecto\web\src\scripts\tabs.js132862922995100753 0
+47C:\Users\2daw3\proyecto\web\src\scripts\tabs.js132863667699498803 0
 60C:\Users\2daw3\proyecto\web\src\data\EstacionesCompleto.json132846433072123484 0
 63C:\Users\2daw3\proyecto\web\node_modules\whatwg-url\LICENSE.txt132760069874590000 0
 74C:\Users\2daw3\proyecto\web\node_modules\core-js\features\object\assign.js132846429373110000 0
@@ -507,7 +507,7 @@
 88C:\Users\2daw3\proyecto\web\node_modules\icss-utils\node_modules\picocolors\package.json132781479788570000 0
 46C:\Users\2daw3\proyecto\web\node_modules\debug132846429431460389 1
 81C:\Users\2daw3\proyecto\web\node_modules\uncss\node_modules\postcss\lib\vendor.js132781479792720000 0
-54C:\Users\2daw3\proyecto\web\dist\index.1955e8a8.js.map132862922162811052 0
+54C:\Users\2daw3\proyecto\web\dist\index.1955e8a8.js.map132863666461819709 0
 56C:\Users\2daw3\proyecto\web\node_modules\lodash\unset.js132760069827770000 0
 57C:\Users\2daw3\proyecto\web\node_modules\xmlchars\LICENSE132760069892830000 0
 83C:\Users\2daw3\proyecto\web\node_modules\es-abstract\2019\OrdinarySetPrototypeOf.js132778192324730000 0
@@ -9232,7 +9232,7 @@
 55C:\Users\2daw3\proyecto\web\node_modules\jake\README.md132787513499150000 0
 73C:\Users\2daw3\proyecto\web\node_modules\json-stringify-safe\package.json132760069878700000 0
 88C:\Users\2daw3\proyecto\web\node_modules\http-signature\node_modules\.bin\sshpk-conv.cmd132846429508959612 0
-43C:\Users\2daw3\proyecto\web\dist\index.html132862921698311327 0
+43C:\Users\2daw3\proyecto\web\dist\index.html132863666526522499 0
 70C:\Users\2daw3\proyecto\web\node_modules\json-stringify-safe\README.md132760069878700000 0
 73C:\Users\2daw3\proyecto\web\node_modules\json-stringify-safe\stringify.js132760069878700000 0
 76C:\Users\2daw3\proyecto\web\node_modules\json-stringify-safe\test\mocha.opts132760069878700000 0
@@ -12380,7 +12380,7 @@
 68C:\Users\2daw3\proyecto\web\node_modules\cssnano-preset-default\dist132846429458579706 1
 73C:\Users\2daw3\proyecto\web\node_modules\cssnano-preset-default\README.md132846429374890000 0
 77C:\Users\2daw3\proyecto\web\node_modules\cssnano-preset-default\dist\index.js132846429374890000 0
-54C:\Users\2daw3\proyecto\web\dist\index.446b6f17.js.map132862922162811052 0
+54C:\Users\2daw3\proyecto\web\dist\index.446b6f17.js.map132863664078985447 0
 60C:\Users\2daw3\proyecto\web\node_modules\cssnano\LICENSE-MIT132846429371890000 0
 62C:\Users\2daw3\proyecto\web\node_modules\cssnano\dist\index.js132846429371890000 0
 75C:\Users\2daw3\proyecto\web\node_modules\core-js\actual\object\is-sealed.js132846429373110000 0
@@ -16617,13 +16617,13 @@
 50C:\Users\2daw3\proyecto\web\node_modules\.bin\uuid132846429512230532 0
 51C:\Users\2daw3\proyecto\web\node_modules\.bin\which132846429512320594 0
 56C:\Users\2daw3\proyecto\web\dist\EstacionesCompleto.json132846451041888060 0
-50C:\Users\2daw3\proyecto\web\dist\index.1955e8a8.js132862922162781056 0
-50C:\Users\2daw3\proyecto\web\dist\index.446b6f17.js132862922162781056 0
-51C:\Users\2daw3\proyecto\web\dist\index.526859ab.css132862922624142867 0
+50C:\Users\2daw3\proyecto\web\dist\index.1955e8a8.js132863666461779749 0
+50C:\Users\2daw3\proyecto\web\dist\index.446b6f17.js132863664078955468 0
+51C:\Users\2daw3\proyecto\web\dist\index.526859ab.css132863664078815459 0
 62C:\Users\2daw3\proyecto\web\dist\index.526859ab.css.1382221836132862897877633744 0
-55C:\Users\2daw3\proyecto\web\dist\index.526859ab.css.map132862922624152868 0
-50C:\Users\2daw3\proyecto\web\dist\index.6d8fae21.js132862922162781056 0
+55C:\Users\2daw3\proyecto\web\dist\index.526859ab.css.map132863664078845517 0
+50C:\Users\2daw3\proyecto\web\dist\index.6d8fae21.js132863664078955468 0
 50C:\Users\2daw3\proyecto\web\dist\index.bd671c2c.js132846442975782204 0
-50C:\Users\2daw3\proyecto\web\dist\index.ebb4570a.js132862922162781056 0
+50C:\Users\2daw3\proyecto\web\dist\index.ebb4570a.js132863664078935460 0
 61C:\Users\2daw3\proyecto\web\dist\index.ebb4570a.js.3485189462132862897877633744 0
-54C:\Users\2daw3\proyecto\web\dist\index.ebb4570a.js.map132862922162811052 0
+54C:\Users\2daw3\proyecto\web\dist\index.ebb4570a.js.map132863664078955468 0
