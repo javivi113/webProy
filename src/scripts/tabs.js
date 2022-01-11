@@ -6,6 +6,11 @@ function cambioIni(){
     $("#dInicio").show();
     $("#dMisSitios").hide();
 }
+function cambioVerBaliza(){
+    $("#dInicio").hide();
+    $("#dMisSitios").hide();
+    $("#dVisializar").show();
+}
 function cambioSit(){
     $("#dInicio").hide();
     $("#dMisSitios").show();

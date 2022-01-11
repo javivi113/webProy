@@ -46,13 +46,22 @@ nav ul li p:hover {
   margin-right: 20px;
 }
 
+#dVerTiempo {
+  width: 30%;
+}
+
+#dVisializar {
+  margin: 55px;
+}
+
 .iconoDragabble {
   font-size: 50px;
   width: 50%;
+  margin-left: 2%;
 }
 .iconoDragabble span {
-  margin-left: 10px;
-  font-size: 30px;
+  margin-left: 2%;
+  font-size: 20px;
 }
 
 .iconoDragabble:hover {
