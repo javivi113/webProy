@@ -14,15 +14,16 @@
     "parcel": "^2.0.1"
   },
   "dependencies": {
-    "bootstrap":"^5.1.3",
+    "bootstrap": "^5.1.3",
+    "bootstrap-sass": "^3.4.1",
     "leaflet": "^1.7.1"
   },
   "alias": {
     "leaflet": {
       "global": "L"
     },
-    "bootstrap":{
-      "global":"bootstrap"
+    "bootstrap": {
+      "global": "bootstrap"
     }
   }
 }

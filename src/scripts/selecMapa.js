@@ -9,6 +9,7 @@ function addBaliza() {
         asBalizas.add(bal);
         localStorage.setItem("balizasGuardadas", JSON.stringify([...asBalizas]));
     } else {
+        document.getElementById("dGuardadoError").innerHTML="";
         asBalizas = new Set();
         console.log('x: ', JSON.parse(valGuardados));
         let getsVal = JSON.parse(valGuardados);

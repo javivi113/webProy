@@ -36,6 +36,45 @@ nav ul li p:hover {
 }
 #dMisSitios ul {
   color: black;
+  list-style: none;
+}
+#dMisSitios ul li {
+  display: inline-block;
+  float: left;
+  color: black;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.iconoDragabble {
+  font-size: 50px;
+  width: 50%;
+}
+.iconoDragabble span {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.iconoDragabble:hover {
+  font-size: 55px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 0px 0px grey;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#dElemDrag {
+  border: 5px solid #253f85;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 0px 0px #4160e6;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+#iBasura {
+  color: red;
+  margin-bottom: 10px;
+  float: right;
+  font-size: 40px;
 }
 
 .dFunMapas {
