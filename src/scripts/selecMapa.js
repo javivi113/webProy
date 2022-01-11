@@ -1,3 +1,4 @@
+let getsVal;
 function addBaliza() {
     var asBalizas = new Set();
     let bal = this.value;
@@ -12,11 +13,15 @@ function addBaliza() {
         document.getElementById("dGuardadoError").innerHTML="";
         asBalizas = new Set();
         console.log('x: ', JSON.parse(valGuardados));
-        let getsVal = JSON.parse(valGuardados);
+        getsVal = JSON.parse(valGuardados);
         getsVal.forEach(a => {
             asBalizas.add(a);
         })
         asBalizas.add(bal);
         localStorage.setItem("balizasGuardadas", JSON.stringify([...asBalizas]));
+
     }
 }   
+function crearBloque(a) {
+    
+}
