@@ -485,6 +485,7 @@ oMarker.forEach((b)=>{
             <button id="btnAñadirBaliza" class='btnOpciones' value='${b.Nombre}'>Añadir</button>
             <button id="btnVerBaliza" class='btnOpciones' value='${b.Nombre}'>Ver</button>`);
         $("#btnAñadirBaliza").on("click", addBaliza);
+        $("#btnVerBaliza").on("click", verBaliza);
     });
 });
 

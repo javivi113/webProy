@@ -6,6 +6,11 @@ function cambioIni(){
     $("#dInicio").show();
     $("#dMisSitios").hide();
 }
+function cambioVerBaliza(){
+    $("#dInicio").hide();
+    $("#dMisSitios").hide();
+    $("#dVisializar").show();
+}
 function cambioSit(){
     $("#dInicio").hide();
     $("#dMisSitios").show();
@@ -14,15 +19,13 @@ function cambioSit(){
 function cargaBalizasGuardadas(){
     let valGuardados = localStorage.getItem("balizasGuardadas");
     if (localStorage.getItem("balizasGuardadas") == null) {
-        console.log("No hay ninguna baliza guardada")
         $("#dGuardadoError").html("<h4>No hay ninguna baliza guardada!</h4>");
     } else {
         document.getElementById("dGuardadoError").innerHTML="";
-        document.getElementById("MiLista").innerHTML ="";
-        console.log('x: ', JSON.parse(valGuardados));
+        document.getElementById("dBalizasGuar").innerHTML ="";
         let getsVal = JSON.parse(valGuardados);
         getsVal.forEach(a=>{
-            document.getElementById("MiLista").innerHTML += "<li>" + a + "</li>";
+            crearBloque(a);
         })
         
     }
