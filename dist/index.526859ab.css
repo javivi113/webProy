@@ -45,6 +45,14 @@ nav ul li p:hover {
   font-size: 25px;
   margin-right: 20px;
 }
+#dMisSitios .balizasGuardada {
+  height: 200px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 0px 0px grey;
+  border-radius: 10px;
+  margin: 4%;
+  text-align: center;
+}
 
 #dVerTiempo {
   width: 30%;
@@ -71,7 +79,25 @@ nav ul li p:hover {
   border-radius: 10px 10px 10px 10px;
 }
 
-#dElemDrag {
+.dDatoParam1 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.dDatoParam1 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.iconoPanel {
+  font-size: 25px;
+}
+.iconoPanel span {
+  margin-left: 2%;
+  font-size: 20px;
+}
+
+.dElemDrag {
   border: 5px solid #253f85;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 10px 10px 0px 0px #4160e6;
