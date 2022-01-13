@@ -3,14 +3,15 @@ function addBaliza() {
     let asBalizas = new Set();
     let bal = this.value;
     console.log(bal);
-    cambioSit();    
+    cambioSit();
     let valGuardados = localStorage.getItem("balizasGuardadas");
     if (valGuardados == undefined) {
         asBalizas.add(bal);
+        document.getElementById("dGuardadoError").innerHTML = "";
         crearBloque(bal);
         localStorage.setItem("balizasGuardadas", JSON.stringify([...asBalizas]));
     } else {
-        document.getElementById("dGuardadoError").innerHTML="";
+        document.getElementById("dGuardadoError").innerHTML = "";
         asBalizas = new Set();
         console.log('x: ', JSON.parse(valGuardados));
         getsVal = JSON.parse(valGuardados);
@@ -20,12 +21,12 @@ function addBaliza() {
         if (!asBalizas.has(bal)) {
             asBalizas.add(bal);
             crearBloque(bal);
-        }       
+        }
         localStorage.setItem("balizasGuardadas", JSON.stringify([...asBalizas]));
     }
-}   
-function crearBloque(a){
-    document.getElementById("dBalizasGuar").innerHTML +=  
+}
+function crearBloque(a) {
+    document.getElementById("dBalizasGuar").innerHTML +=
     `<div class="col-sm-3 balizasGuardada">
         <h7>${a}</h7>
         <div class="dBloqueDatos">
@@ -38,12 +39,11 @@ function crearBloque(a){
             <div class="dDatoParam2">
                 <i class="bi bi-moisture iconoPanel" value="Humedad"><span id="spParam1">68%</span></i>
             </div>            
-        </div>
-    
+        </div>    
     </div>`;
 }
 function verBaliza() {
-    let sBaliza=this.value;
+    let sBaliza = this.value;
     cambioVerBaliza();
-    document.getElementById("hCabBaliza").textContent=sBaliza;
+    document.getElementById("hCabBaliza").textContent = sBaliza;
 }

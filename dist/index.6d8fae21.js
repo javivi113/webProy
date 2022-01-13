@@ -7,6 +7,7 @@ function addBaliza() {
     let valGuardados = localStorage.getItem("balizasGuardadas");
     if (valGuardados == undefined) {
         asBalizas.add(bal);
+        document.getElementById("dGuardadoError").innerHTML = "";
         crearBloque(bal);
         localStorage.setItem("balizasGuardadas", JSON.stringify([
             ...asBalizas
@@ -41,8 +42,7 @@ function crearBloque(a) {
             <div class="dDatoParam2">
                 <i class="bi bi-moisture iconoPanel" value="Humedad"><span id="spParam1">68%</span></i>
             </div>            
-        </div>
-    
+        </div>    
     </div>`;
 }
 function verBaliza() {

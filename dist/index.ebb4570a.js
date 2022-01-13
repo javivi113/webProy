@@ -464,6 +464,26 @@ var _leaflet = require("leaflet");
 var _leafletDefault = parcelHelpers.interopDefault(_leaflet);
 const oMarker = JSON.parse(aMarkers);
 let bPrim = false;
+var bIcon = new _leafletDefault.default.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [
+        25,
+        41
+    ],
+    iconAnchor: [
+        12,
+        41
+    ],
+    popupAnchor: [
+        1,
+        -34
+    ],
+    shadowSize: [
+        41,
+        41
+    ]
+});
 var map = _leafletDefault.default.map('map').setView([
     43.01195,
     -2.56789
@@ -473,7 +493,9 @@ oMarker.forEach((b)=>{
     var marcador = _leafletDefault.default.marker([
         b.GpxY,
         b.GpxX
-    ]).bindPopup(b.Nombre).addTo(map).on("click", (k)=>{
+    ], {
+        icon: bIcon
+    }).bindPopup(b.Nombre).addTo(map).on("click", (k)=>{
         if (!bPrim) {
             $("#dOpciones").slideDown(100);
             bPrim = !bPrim;

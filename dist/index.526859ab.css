@@ -1,3 +1,7 @@
+#dDragMovible {
+  border: 1px solid black;
+}
+
 nav {
   position: fixed;
   overflow: hidden;
@@ -64,12 +68,7 @@ nav ul li p:hover {
 
 .iconoDragabble {
   font-size: 50px;
-  width: 50%;
-  margin-left: 2%;
-}
-.iconoDragabble span {
-  margin-left: 2%;
-  font-size: 20px;
+  text-align: center;
 }
 
 .iconoDragabble:hover {
