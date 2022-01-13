@@ -36,14 +36,18 @@ function crearBloque(a) {
             <div class="dEstado">
                 <i id="iEstadoTiempo"></i>
             </div>
-            <div class="dDatoParam1">
+            <div class="dDatoParam" id="dDatoParam1">
                 <i class="bi bi-thermometer iconoPanel" value="Temperatura"><span id="spParam1">20&deg;C</span></i>
             </div>
-            <div class="dDatoParam2">
+            <div class="dDatoParam" id="dDatoParam2">
                 <i class="bi bi-moisture iconoPanel" value="Humedad"><span id="spParam1">68%</span></i>
+            </div>  
+            <div class="dDatoParam" id="dDatoParam3">
+                
             </div>            
         </div>    
     </div>`;
+    crearBloqueDraggable();
 }
 function verBaliza() {
     let sBaliza = this.value;

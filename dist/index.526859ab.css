@@ -74,16 +74,11 @@ nav ul li p:hover {
 .iconoDragabble:hover {
   font-size: 55px;
   border: 1px solid black;
-  box-shadow: 5px 5px 0px 0px grey;
+  box-shadow: 3px 7px 0px 0px grey;
   border-radius: 10px 10px 10px 10px;
 }
 
-.dDatoParam1 {
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
-
-.dDatoParam1 {
+.dDatoParam {
   margin-top: 1%;
   margin-bottom: 1%;
 }
@@ -100,8 +95,8 @@ nav ul li p:hover {
   border: 5px solid #253f85;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 10px 10px 0px 0px #4160e6;
-  margin-bottom: 15px;
-  padding: 20px;
+  margin: 15px;
+  padding: 25px;
 }
 
 #iBasura {
@@ -109,6 +104,7 @@ nav ul li p:hover {
   margin-bottom: 10px;
   float: right;
   font-size: 40px;
+  display: none;
 }
 
 .dFunMapas {
