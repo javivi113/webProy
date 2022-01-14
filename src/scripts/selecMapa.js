@@ -39,7 +39,7 @@ function crearBloque(a) {
             <div class="dDatoParam" id="dDatoParam2">
                 <i class="bi bi-moisture iconoPanel" value="Humedad"><span id="spParam1">68%</span></i>
             </div>  
-            <div class="dDatoParam" id="dDatoParam3">
+            <div class="dDatoParam dDatoParam3 dDropable">
                 
             </div>            
         </div>    

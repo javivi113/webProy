@@ -140,7 +140,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"7lZIF":[function(require,module,exports) {
+})({"dSQMZ":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
@@ -462,9 +462,13 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _leaflet = require("leaflet");
 var _leafletDefault = parcelHelpers.interopDefault(_leaflet);
+const map = _leafletDefault.default.map('map').setView([
+    43.01195,
+    -2.56789
+], 8.5);
 const oMarker = JSON.parse(aMarkers);
 let bPrim = false;
-var bIcon = new _leafletDefault.default.Icon({
+var selectIcon = new _leafletDefault.default.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [
@@ -484,32 +488,78 @@ var bIcon = new _leafletDefault.default.Icon({
         41
     ]
 });
-var map = _leafletDefault.default.map('map').setView([
-    43.01195,
-    -2.56789
-], 8.5);
-_leafletDefault.default.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-oMarker.forEach((b)=>{
-    var marcador = _leafletDefault.default.marker([
-        b.GpxY,
-        b.GpxX
-    ], {
-        icon: bIcon
-    }).bindPopup(b.Nombre).addTo(map).on("click", (k)=>{
-        if (!bPrim) {
-            $("#dOpciones").slideDown(100);
-            bPrim = !bPrim;
-        } else {
-            $("#dOpciones").slideToggle(50);
-            $("#dOpciones").slideToggle(100);
-        }
-        $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${b.Nombre}</p></div>
-            <button id="btnAñadirBaliza" class='btnOpciones' value='${b.Nombre}'>Añadir</button>
-            <button id="btnVerBaliza" class='btnOpciones' value='${b.Nombre}'>Ver</button>`);
-        $("#btnAñadirBaliza").on("click", addBaliza);
-        $("#btnVerBaliza").on("click", verBaliza);
-    });
+var unSelectIcon = new _leafletDefault.default.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [
+        25,
+        41
+    ],
+    iconAnchor: [
+        12,
+        41
+    ],
+    popupAnchor: [
+        1,
+        -34
+    ],
+    shadowSize: [
+        41,
+        41
+    ]
 });
+function colocarMarcadores() {
+    var getsVal;
+    let valGuardados = localStorage.getItem("balizasGuardadas");
+    if (valGuardados != undefined) getsVal = JSON.parse(valGuardados);
+    else var getsVal = [
+        ""
+    ];
+    _leafletDefault.default.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    oMarker.forEach((b)=>{
+        //console.log(getsVal+"=>"+b.Nombre)       
+        if (getsVal.includes(b.Nombre)) {
+            let marcador = _leafletDefault.default.marker([
+                b.GpxY,
+                b.GpxX
+            ], {
+                icon: selectIcon
+            }).bindPopup(b.Nombre).addTo(map).on("click", (k)=>{
+                if (!bPrim) {
+                    $("#dOpciones").slideDown(100);
+                    bPrim = !bPrim;
+                } else {
+                    $("#dOpciones").slideToggle(50);
+                    $("#dOpciones").slideToggle(100);
+                }
+                $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${b.Nombre}</p></div>
+                        <button id="btnAñadirBaliza" class='btnOpciones' value='${b.Nombre}'>Eliminar</button>
+                        <button id="btnVerBaliza" class='btnOpciones' value='${b.Nombre}'>Ver</button>`);
+                $("#btnAñadirBaliza").on("click", addBaliza);
+                $("#btnVerBaliza").on("click", verBaliza);
+            });
+        } else var marcador = _leafletDefault.default.marker([
+            b.GpxY,
+            b.GpxX
+        ], {
+            icon: unSelectIcon
+        }).bindPopup(b.Nombre).addTo(map).on("click", (k)=>{
+            if (!bPrim) {
+                $("#dOpciones").slideDown(100);
+                bPrim = !bPrim;
+            } else {
+                $("#dOpciones").slideToggle(50);
+                $("#dOpciones").slideToggle(100);
+            }
+            $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${b.Nombre}</p></div>
+                        <button id="btnAñadirBaliza" class='btnOpciones' value='${b.Nombre}'>Añadir</button>
+                        <button id="btnVerBaliza" class='btnOpciones' value='${b.Nombre}'>Ver</button>`);
+            $("#btnAñadirBaliza").on("click", addBaliza);
+            $("#btnVerBaliza").on("click", verBaliza);
+        });
+    });
+}
+colocarMarcadores();
 
 },{"leaflet":"1Rhcw","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1Rhcw":[function(require,module,exports) {
 module.exports = L;
@@ -544,6 +594,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["7lZIF","ie4Jc"], "ie4Jc", "parcelRequire2d1f")
+},{}]},["dSQMZ","ie4Jc"], "ie4Jc", "parcelRequire2d1f")
 
 //# sourceMappingURL=index.ebb4570a.js.map

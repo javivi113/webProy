@@ -5,6 +5,8 @@ $("#dVisializar").hide();
 function cambioIni(){
     $("#dInicio").show();
     $("#dMisSitios").hide();
+    //colocarMarcadores();
+    location.reload();
 }
 function cambioVerBaliza(){
     $("#dInicio").hide();
@@ -26,7 +28,6 @@ function cargaBalizasGuardadas(){
         let getsVal = JSON.parse(valGuardados);
         getsVal.forEach(a=>{
             crearBloque(a);
-        })
-        
+        })        
     }
 }
