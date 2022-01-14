@@ -48,11 +48,18 @@
         <div id="dDragMovible">
             <div class="container dElemDrag">
                 <div class="row">
-                    <i class="col-sm-3 bi bi-droplet iconoDragabble" value="Precipitacion"></i>
-                    <i class="col-sm-3 bi bi-thermometer iconoDragabble" value="Temperatura"></i>
-                    <i class="col-sm-3 bi bi-wind iconoDragabble" value="Velocidad_del_viento"></i>
-                    <i class="col-sm-3 bi bi-moisture iconoDragabble" value="Humedad"></i>
-
+                    <div id="dM1" class="col-sm-3">
+                        <i id="iM1" class="bi bi-droplet iconoDragabble" value="Precipitacion"></i>
+                    </div>
+                    <div id="dM2" class="col-sm-3">
+                        <i id="iM2" class="bi bi-thermometer iconoDragabble" value="Temperatura"></i>
+                    </div>
+                    <div id="dM3" class="col-sm-3">
+                        <i id="iM3"class="bi bi-wind iconoDragabble" value="Velocidad_del_viento"></i>
+                    </div>
+                    <div id="dM4" class="col-sm-3">
+                        <i id="iM4"class="bi bi-moisture iconoDragabble" value="Humedad"></i>
+                    </div>
                 </div>
             </div>
             <div id="" class="container dElemDrag">
@@ -79,18 +86,18 @@
                 <span id="spParam2"><span id="spValParam2"></span></span>
             </div>
             <div class="dDatoParam" id="">
-                
+
             </div>
         </div>
     </div>
 
 
     <script src="scripts/leaflet.js" type="module"></script>
-    <script src="scripts/EstacionesCompleto.js"></script>    
+    <script src="scripts/EstacionesCompleto.js"></script>
     <script src="scripts/selecMapa.js"></script>
     <script src="scripts/gestionDatos.js"></script>
     <script src="scripts/elemDragables.js"></script>
-    <script src="scripts/tabs.js" ></script>
+    <script src="scripts/tabs.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"
         integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

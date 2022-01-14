@@ -38,6 +38,7 @@ function crearBloqueDraggable() {
     $(".dDropable").droppable({
         drop: function(event, ui) {
             $(this).append(ui.draggable.removeClass("dDropable").addClass("iconoPanel"));
+            $(this).append(ui.draggable.removeClass("dDropable").addClass("iconoPanel"));
         }
     });
 }
