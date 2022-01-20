@@ -5,8 +5,8 @@ $("#dVisializar").hide();
 function cambioIni(){
     $("#dInicio").show();
     $("#dMisSitios").hide();
-    //colocarMarcadores();
-    location.reload();
+    colocarMarcadores();
+    //location.reload();
 }
 function cambioVerBaliza(){
     $("#dInicio").hide();

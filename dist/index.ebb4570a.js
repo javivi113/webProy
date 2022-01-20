@@ -560,6 +560,7 @@ function colocarMarcadores() {
     });
 }
 colocarMarcadores();
+window.colocarMarcadores = colocarMarcadores;
 
 },{"leaflet":"1Rhcw","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1Rhcw":[function(require,module,exports) {
 module.exports = L;

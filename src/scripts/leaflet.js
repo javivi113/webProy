@@ -74,3 +74,4 @@ function colocarMarcadores() {
     });
 }
 colocarMarcadores();
+window.colocarMarcadores=colocarMarcadores;
