@@ -81,6 +81,7 @@ nav ul li p:hover {
 .dDatoParam {
   margin-top: 1%;
   margin-bottom: 1%;
+  display: none;
 }
 
 .iconoPanel {

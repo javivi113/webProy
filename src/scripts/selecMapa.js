@@ -25,23 +25,29 @@ function addBaliza() {
         localStorage.setItem("balizasGuardadas", JSON.stringify([...asBalizas]));
     }
 }
-function crearBloque(a) {
+function crearBloque(a, temp, descTiempo, imgTiempo, velViento, precipitaciones) {
+    var fecha= new Date;
     document.getElementById("dBalizasGuar").innerHTML +=
     `<div class="col-sm-3 balizasGuardada">
         <h7>${a}</h7>
         <div class="dBloqueDatos">
             <div class="dEstado">
-                <i id="iEstadoTiempo"></i>
+                <img src="https://opendata.euskadi.eus/${imgTiempo}" id="iEstadoTiempo"></i>
+                <span>${descTiempo}</span>
             </div>
-            <div class="dDatoParam" id="dDatoParam1">
-                <i class="bi bi-thermometer iconoPanel" value="Temperatura"><span id="spParam1">20&deg;C</span></i>
+            <div class="dDatoParam" id="dDatHora">
+                <i class="bi bi-wind iconoPanel" value="Hora"><span id="spParamHora">${fecha.getHours()}:${fecha.getMinutes()}"</span></i>
+            </div> 
+            <div class="dDatoParam" id="dDatTemperatura">
+                <i class="bi bi-thermometer iconoPanel" value="Temperatura"><span id="spParam1">${temp}&deg;C</span></i>
             </div>
-            <div class="dDatoParam" id="dDatoParam2">
-                <i class="bi bi-moisture iconoPanel" value="Humedad"><span id="spParam1">68%</span></i>
+            <div class="dDatoParam" id="dDatPrecipitaciones">
+                <i class="bi bi-moisture iconoPanel" value="Precipitaciones"><span id="spParam2">${precipitaciones}</span></i>
             </div>  
-            <div class="dDatoParam dDatoParam3 dDropable">
-                
-            </div>            
+            <div class="dDatoParam" id="dDatVelViento">
+                <i class="bi bi-wind iconoPanel" value="VelViento"><span id="spParam3">${velViento}</span></i>
+            </div>
+                       
         </div>    
     </div>`;
     crearBloqueDraggable();

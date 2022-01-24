@@ -532,13 +532,13 @@ function colocarMarcadores() {
                     if (!stMunipaNoRep.has(puebloAMinus)) {
                         stMunipaNoRep.add(puebloAMinus);
                         //console.log(getsVal+"=>"+b.Municipio)   
-                        if (getsVal.includes(b.Municipio)) {
+                        if (getsVal.includes(puebloAMinus)) {
                             let marcador = _leafletDefault.default.marker([
                                 b.GpxY,
                                 b.GpxX
                             ], {
                                 icon: selectIcon
-                            }).bindPopup(b.Municipio).addTo(map).on("click", (k)=>{
+                            }).bindPopup(puebloAMinus).addTo(map).on("click", (k)=>{
                                 if (!bPrim) {
                                     $("#dOpciones").slideDown(100);
                                     bPrim = !bPrim;
@@ -546,9 +546,9 @@ function colocarMarcadores() {
                                     $("#dOpciones").slideToggle(50);
                                     $("#dOpciones").slideToggle(100);
                                 }
-                                $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${b.Municipio}</p></div>
-            <button id="btnAñadirBaliza" class='btnOpciones' value='${b.Municipio}'>Eliminar</button>
-            <button id="btnVerBaliza" class='btnOpciones' value='${b.Municipio}'>Ver</button>`);
+                                $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${puebloAMinus}</p></div>
+            <button id="btnAñadirBaliza" class='btnOpciones' value='${puebloAMinus}'>Eliminar</button>
+            <button id="btnVerBaliza" class='btnOpciones' value='${puebloAMinus}'>Ver</button>`);
                                 $("#btnAñadirBaliza").on("click", addBaliza);
                                 $("#btnVerBaliza").on("click", verBaliza);
                             });
@@ -557,7 +557,7 @@ function colocarMarcadores() {
                             b.GpxX
                         ], {
                             icon: unSelectIcon
-                        }).bindPopup(b.Municipio).addTo(map).on("click", (k)=>{
+                        }).bindPopup(puebloAMinus).addTo(map).on("click", (k)=>{
                             if (!bPrim) {
                                 $("#dOpciones").slideDown(100);
                                 bPrim = !bPrim;
@@ -565,9 +565,9 @@ function colocarMarcadores() {
                                 $("#dOpciones").slideToggle(50);
                                 $("#dOpciones").slideToggle(100);
                             }
-                            $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${b.Municipio}</p></div>
-            <button id="btnAñadirBaliza" class='btnOpciones' value='${b.Municipio}'>Añadir</button>
-            <button id="btnVerBaliza" class='btnOpciones' value='${b.Municipio}'>Ver</button>`);
+                            $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${puebloAMinus}</p></div>
+            <button id="btnAñadirBaliza" class='btnOpciones' value='${puebloAMinus}'>Añadir</button>
+            <button id="btnVerBaliza" class='btnOpciones' value='${puebloAMinus}'>Ver</button>`);
                             $("#btnAñadirBaliza").on("click", addBaliza);
                             $("#btnVerBaliza").on("click", verBaliza);
                         });
