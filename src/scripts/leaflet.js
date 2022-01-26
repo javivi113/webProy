@@ -1,5 +1,6 @@
 import L from 'leaflet';
 const map = L.map('map').setView([43.0119500, -2.56789], 8.5);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 var url = "https://localhost:5001";
 const oMarker = JSON.parse(aMarkers);
 let bPrim = false;
@@ -19,21 +20,26 @@ var unSelectIcon = new L.Icon({
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
 });
+var arrayIdMarkadores=[];
 
 function colocarMarcadores() {
-    var ApiDatos = fetch(`${url}/api/Tiempo`)
+    fetch(`${url}/api/Tiempo`)
         .then(response => {
             return response.json();
         })
         .then(api => {
+            let i = 0;
             //console.log(api)
-            var getsVal=[""];
+            //map.removeLayer(marker)
+            var getsVal = [""];
             var stMunipaNoRep = new Set();
             let valGuardados = localStorage.getItem("balizasGuardadas");
             if (valGuardados != undefined) {
                 getsVal = JSON.parse(valGuardados);
             }
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            if (arrayIdMarkadores.length!=0) {
+                arrayIdMarkadores.forEach(id=>map.removeLayer(id))
+            }
             oMarker.forEach(b => {
                 api.forEach(munici => {
                     let puebloJson = b.Municipio;
@@ -64,8 +70,9 @@ function colocarMarcadores() {
                                         $("#btnVerBaliza").on("click", verBaliza);
 
                                     })
+                                arrayIdMarkadores.push(marcador);
                             } else {
-                                var marcador = L.marker([b.GpxY, b.GpxX], { icon: unSelectIcon })
+                                let marcador = L.marker([b.GpxY, b.GpxX], { icon: unSelectIcon })
                                     .bindPopup(puebloAMinus)
                                     .addTo(map)
                                     .on("click", k => {
@@ -83,7 +90,10 @@ function colocarMarcadores() {
                                         $("#btnVerBaliza").on("click", verBaliza);
 
                                     })
+                                arrayIdMarkadores.push(marcador);
                             }
+
+
                         }
                     }
                 })

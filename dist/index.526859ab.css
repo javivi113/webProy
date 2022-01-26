@@ -35,6 +35,11 @@ nav ul li p:hover {
   cursor: pointer;
 }
 
+.iEstadoTiempo {
+  width: 60px;
+  height: 60px;
+}
+
 #dMisSitios {
   margin: 55px;
 }
@@ -50,12 +55,14 @@ nav ul li p:hover {
   margin-right: 20px;
 }
 #dMisSitios .balizasGuardada {
-  height: 200px;
   border: 1px solid black;
   box-shadow: 3px 3px 0px 0px grey;
   border-radius: 10px;
   margin: 4%;
   text-align: center;
+}
+#dMisSitios .balizasGuardada .hLocalidadGuardada:first-letter {
+  text-transform: uppercase;
 }
 
 #dVerTiempo {
@@ -81,7 +88,6 @@ nav ul li p:hover {
 .dDatoParam {
   margin-top: 1%;
   margin-bottom: 1%;
-  display: none;
 }
 
 .iconoPanel {
@@ -146,5 +152,10 @@ nav ul li p:hover {
   height: 50px;
   margin-left: 13%;
   margin-top: 7%;
+}
+
+.btnExit {
+  float: right;
+  font-size: 10px;
 }
 /*# sourceMappingURL=index.526859ab.css.map */

@@ -23,19 +23,6 @@ function cambioSit() {
         document.getElementById("dBalizasGuar").innerHTML = "";
         GuardarDatosApi();
     }
-} /*
-function cargaBalizasGuardadas() {
-    let valGuardados = localStorage.getItem("balizasGuardadas");
-    if (localStorage.getItem("balizasGuardadas") == null) {
-        $("#dGuardadoError").html("<h4>No hay ninguna baliza guardada!</h4>");
-    } else {
-        document.getElementById("dGuardadoError").innerHTML = "";
-        document.getElementById("dBalizasGuar").innerHTML = "";
-        let getsVal = JSON.parse(valGuardados);
-        getsVal.forEach(a => {
-            crearBloque(a);
-        })
-    }
-}*/ 
+}
 
 //# sourceMappingURL=index.1955e8a8.js.map

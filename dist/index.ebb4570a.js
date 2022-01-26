@@ -466,6 +466,7 @@ const map = _leafletDefault.default.map('map').setView([
     43.01195,
     -2.56789
 ], 8.5);
+_leafletDefault.default.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 var url = "https://localhost:5001";
 const oMarker = JSON.parse(aMarkers);
 let bPrim = false;
@@ -509,18 +510,22 @@ var unSelectIcon = new _leafletDefault.default.Icon({
         41
     ]
 });
+var arrayIdMarkadores = [];
 function colocarMarcadores() {
-    var ApiDatos = fetch(`${url}/api/Tiempo`).then((response)=>{
+    fetch(`${url}/api/Tiempo`).then((response)=>{
         return response.json();
     }).then((api)=>{
+        let i = 0;
         //console.log(api)
+        //map.removeLayer(marker)
         var getsVal = [
             ""
         ];
         var stMunipaNoRep = new Set();
         let valGuardados = localStorage.getItem("balizasGuardadas");
         if (valGuardados != undefined) getsVal = JSON.parse(valGuardados);
-        _leafletDefault.default.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        if (arrayIdMarkadores.length != 0) arrayIdMarkadores.forEach((id)=>map.removeLayer(id)
+        );
         oMarker.forEach((b)=>{
             api.forEach((munici)=>{
                 let puebloJson = b.Municipio;
@@ -552,25 +557,29 @@ function colocarMarcadores() {
                                 $("#btnAñadirBaliza").on("click", addBaliza);
                                 $("#btnVerBaliza").on("click", verBaliza);
                             });
-                        } else var marcador = _leafletDefault.default.marker([
-                            b.GpxY,
-                            b.GpxX
-                        ], {
-                            icon: unSelectIcon
-                        }).bindPopup(puebloAMinus).addTo(map).on("click", (k)=>{
-                            if (!bPrim) {
-                                $("#dOpciones").slideDown(100);
-                                bPrim = !bPrim;
-                            } else {
-                                $("#dOpciones").slideToggle(50);
-                                $("#dOpciones").slideToggle(100);
-                            }
-                            $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${puebloAMinus}</p></div>
+                            arrayIdMarkadores.push(marcador);
+                        } else {
+                            let marcador = _leafletDefault.default.marker([
+                                b.GpxY,
+                                b.GpxX
+                            ], {
+                                icon: unSelectIcon
+                            }).bindPopup(puebloAMinus).addTo(map).on("click", (k)=>{
+                                if (!bPrim) {
+                                    $("#dOpciones").slideDown(100);
+                                    bPrim = !bPrim;
+                                } else {
+                                    $("#dOpciones").slideToggle(50);
+                                    $("#dOpciones").slideToggle(100);
+                                }
+                                $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${puebloAMinus}</p></div>
             <button id="btnAñadirBaliza" class='btnOpciones' value='${puebloAMinus}'>Añadir</button>
             <button id="btnVerBaliza" class='btnOpciones' value='${puebloAMinus}'>Ver</button>`);
-                            $("#btnAñadirBaliza").on("click", addBaliza);
-                            $("#btnVerBaliza").on("click", verBaliza);
-                        });
+                                $("#btnAñadirBaliza").on("click", addBaliza);
+                                $("#btnVerBaliza").on("click", verBaliza);
+                            });
+                            arrayIdMarkadores.push(marcador);
+                        }
                     }
                 }
             });

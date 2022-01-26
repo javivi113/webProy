@@ -18,7 +18,6 @@ function GuardarDatosApi() {
                     console.log(b.municipio);
                     console.log("*********");
                     crearBloque(b.municipio, b.temperatura, b.descripcionTiempo, b.pathImg, b.velocidadViento, b.precipitaciones);
-
                 })
                 .catch(err => console.log(err));
         } else {
