@@ -7,16 +7,13 @@ function recogerDatosLocalidad(loc) {
 }
 function GuardarDatosApi() {
     var valoresLocalSt = localStorage.getItem("balizasGuardadas");
+    document.getElementById("dBalizasGuar").innerHTML ="";
     if (valoresLocalSt != undefined || valoresLocalSt != null) {
         window.arrayLoc = JSON.parse(valoresLocalSt);
         if (arrayLoc.length == 1) {
             fetch(`${url}/api/Tiempo/${arrayLoc[0]}`)
                 .then(response => response.json())
                 .then(b => {
-                    console.log("*********");
-                    console.log(`${url}/api/Tiempo/${arrayLoc[0]}`);
-                    console.log(b.municipio);
-                    console.log("*********");
                     crearBloque(b.municipio, b.temperatura, b.descripcionTiempo, b.pathImg, b.velocidadViento, b.precipitaciones);
                 })
                 .catch(err => console.log(err));
@@ -25,20 +22,13 @@ function GuardarDatosApi() {
                 fetch(`${url}/api/Tiempo/${a}`)
                     .then(response => response.json())
                     .then(b => {
-                        console.log("*********");
-                        console.log(`${url}/api/Tiempo/${a}`);
-                        console.log(b.municipio);
-                        console.log("*********");
                         crearBloque(b.municipio, b.temperatura, b.descripcionTiempo, b.pathImg, b.velocidadViento, b.precipitaciones);
                     })
                     .catch(err => console.log(err));
             });
         }
     }
-    else {
-        console.log("no hay nada");
-    }
 }
-//setInterval(ponerDatosApi,1000)
+setInterval(GuardarDatosApi,10000)
 window.recogerDatosLocalidad = recogerDatosLocalidad;      
 window.GuardarDatosApi = GuardarDatosApi;                                                          

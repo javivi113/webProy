@@ -14,22 +14,26 @@ $(".iconoDragabble").draggable({
         $(".balizasGuardada").css("background-color", "lightyellow");
     }
 });
-$(".iconoDragabble").droppable({
-    helper: "clone",
-    cursor: "grabbing",
-    cursorAt: {
-        x: 0,
-        y: 0
-    },
-    containment: "#dDragMovible",
-    stop: function() {
-        $(".dDatoParam3").css("border", "none").css("background-color", "white");
-        $(".balizasGuardada").css("background-color", "white");
-    },
-    start: function() {
-        $(".balizasGuardada").css("background-color", "lightyellow");
-    }
-});
+function paramDrop() {
+    $(".dropAqui").droppable({
+        drop: function(event, ui) {
+            $(`#dDat${$(ui.draggable).attr("value")}${$(this).attr("value")}`).show();
+        }
+    });
+    $("#dBasura").droppable({
+        tolerance: "pointer",
+        over: function(event, ui) {
+            $("#dBasura").css("margin", "2px").css("border-radius", "10px").css("background-color", "lightgrey");
+        },
+        out: function(event, ui) {
+            $("#dBasura").css("margin", "0px").css("border-radius", "0px").css("background-color", "white");
+        },
+        drop: function(event, ui) {
+            $(ui.draggable).remove();
+            delBaliza($(ui.draggable).attr("value"));
+        }
+    });
+}
 function crearBloqueDraggable() {
     $(".balizasGuardada").draggable({
         revert: true,
@@ -50,7 +54,6 @@ function crearBloqueDraggable() {
     });
     $(".dDropable").droppable({
         drop: function(event, ui) {
-            console.log(ui.draggable.attr("value"));
             $(this).append(ui.draggable.removeClass("dDropable").addClass("iconoPanel"));
             $(this).removeClass("dDropable");
             document.getElementById("dRDatos").innerHTML = `<div id="" class="col-sm-3">
