@@ -34,8 +34,14 @@ function colocarMarcadores() {
             var getsVal = [""];
             var stMunipaNoRep = new Set();
             let valGuardados = localStorage.getItem("balizasGuardadas");
+            let aSoloBalizas= new Array();
+            let iPosAbali=0;
             if (valGuardados != undefined) {
                 getsVal = JSON.parse(valGuardados);
+                getsVal.forEach(a=>{
+                    aSoloBalizas[iPosAbali]=a[0];
+                    iPosAbali++;
+                })
             }
             if (arrayIdMarkadores.length!=0) {
                 arrayIdMarkadores.forEach(id=>map.removeLayer(id))
@@ -51,7 +57,7 @@ function colocarMarcadores() {
                         if (!stMunipaNoRep.has(puebloAMinus)) {
                             stMunipaNoRep.add(puebloAMinus);
                             //console.log(getsVal+"=>"+b.Municipio)   
-                            if (getsVal.includes(puebloAMinus)) {
+                            if (aSoloBalizas.includes(puebloAMinus)) {
                                 let marcador = L.marker([b.GpxY, b.GpxX], { icon: selectIcon })
                                     .bindPopup(puebloAMinus)
                                     .addTo(map)
@@ -63,7 +69,7 @@ function colocarMarcadores() {
                                             $("#dOpciones").slideToggle(50);
                                             $("#dOpciones").slideToggle(100);
                                         }
-                                        $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${puebloAMinus}</p></div>
+                                        $("#dOpciones").html(`<div id="dBalSele"><p class="pDBaliza">${puebloAMinus}</p></div>
             <button id="btnAñadirBaliza" class='btnOpciones' value='${puebloAMinus}'>Eliminar</button>
             <button id="btnVerBaliza" class='btnOpciones' value='${puebloAMinus}'>Ver</button>`);
                                         $("#btnAñadirBaliza").on("click", addBaliza);
@@ -83,7 +89,7 @@ function colocarMarcadores() {
                                             $("#dOpciones").slideToggle(50);
                                             $("#dOpciones").slideToggle(100);
                                         }
-                                        $("#dOpciones").html(`<div id="dBalSele"><p id="pDBaliza">${puebloAMinus}</p></div>
+                                        $("#dOpciones").html(`<div id="dBalSele"><p class="pDBaliza">${puebloAMinus}</p></div>
             <button id="btnAñadirBaliza" class='btnOpciones' value='${puebloAMinus}'>Añadir</button>
             <button id="btnVerBaliza" class='btnOpciones' value='${puebloAMinus}'>Ver</button>`);
                                         $("#btnAñadirBaliza").on("click", addBaliza);

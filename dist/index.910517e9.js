@@ -17,7 +17,21 @@ $(".iconoDragabble").draggable({
 function paramDrop() {
     $(".dropAqui").droppable({
         drop: function(event, ui) {
-            $(`#dDat${$(ui.draggable).attr("value")}${$(this).attr("value")}`).show();
+            var sParam = $(ui.draggable).attr("value");
+            var loc = $(this).attr("value");
+            $(`#dDat${sParam}${loc}`).show();
+            let valGuardados = JSON.parse(localStorage.getItem("balizasGuardadas"));
+            let i = 0;
+            let pos = 0;
+            let param = posParametro(sParam);
+            valGuardados.forEach((a)=>{
+                if (a[0] == loc) pos = i;
+                i++;
+            });
+            valGuardados[pos][param] = sParam;
+            localStorage.setItem("balizasGuardadas", JSON.stringify([
+                ...valGuardados
+            ]));
         }
     });
     $("#dBasura").droppable({

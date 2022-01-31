@@ -1,13 +1,60 @@
 $AzulOscuro: rgba(37,63,133,1)
 $Azul: rgba(65,96,230,1)
+$Blanco: rgba(251,250,240,1)
+$Negro: rgba(5,20,10,1)
+$Rojo: rgba(200,30,50,1)
+$Gris: rgba(120,130,135,1)
 
+.inicioPanel
+    background-color: $AzulOscuro
+    height: auto
+    width: 30%
+    padding: 2%
+    top: 50px
+    left: 40%
+    margin: auto
+    position: absolute
+    z-index: 10000
+    h1
+        color: $Blanco
+    span
+        color: $Blanco
+@media screen and ( max-width: 1600px )
+    .inicioPanel
+        left: 40%
+    nav
+        position: fixed
+        overflow: hidden
+        background: linear-gradient(0deg, $AzulOscuro 0%, $Azul 90%)
+        height: 50px
+        top: 0
+        width: 100%
+    ul
+        list-style: none
+        img
+            height: 40px
+            width: 40px
+        li
+            display: inline-block
+            float: left
+            color: $Blanco
+            font-size: 25px
+            p
+                text-decoration: none
+                font-size: 28px
+                color: $Blanco
+                margin-left: 0rem
+            p:hover
+                font-size: 28px
+                color: $Negro
+                cursor: pointer
 
 #dDragMovible
-    border: 1px solid black
+    border: 1px solid $Negro
 nav
     position: fixed
     overflow: hidden
-    background: linear-gradient(5deg, $AzulOscuro 0%, rgba(65,96,230,1) 100%)
+    background: linear-gradient(0deg, $AzulOscuro 0%, $Azul 90%)
     height: 50px
     top: 0
     width: 100%
@@ -19,35 +66,37 @@ nav
         li
             display: inline-block
             float: left
-            color: white
+            color: $Blanco
             font-size: 25px
+
             p
                 text-decoration: none
                 font-size: 28px
-                color: white
+                color: $Blanco
                 margin-left: 10rem
             p:hover
                 font-size: 28px
-                color: black
+                color: $Negro
                 cursor: pointer
+
 .iEstadoTiempo
     width: 60px
     height: 60px
 #dMisSitios
     margin: 55px
     ul
-        color: black
+        color: $Negro
         list-style: none
         li
             display: inline-block
             float: left
-            color: black
+            color: $Negro
             font-size: 25px
             margin-right: 20px
     .balizasGuardada
-        
-        border: 1px solid black
-        box-shadow: 3px 3px 0px 0px grey
+
+        border: 1px solid $Negro
+        box-shadow: 3px 3px 0px 0px $Gris
         border-radius: 10px
         margin: 4%
         text-align: center
@@ -66,14 +115,14 @@ nav
 
 .iconoDragabble:hover
     font-size: 55px
-    border: 1px solid black
+    border: 1px solid $Negro
     box-shadow: 3px 7px 0px 0px grey
     border-radius: 10px 10px 10px 10px
 
 .dDatoParam
     margin-top: 1%
     margin-bottom: 1%
-    
+    display: none
 
 .iconoPanel
     font-size: 25px
@@ -88,9 +137,8 @@ nav
     margin: 15px
     padding: 25px
 
-
 #iBasura
-    color: red
+    color: $Rojo
     margin-bottom: 10px
     float: right
     font-size: 40px
@@ -102,25 +150,28 @@ nav
 #map
     width: 900px
     height: 500px
-    border: 5px solid black
+    border: 5px solid $Negro
     border-radius: 10px
 
 #dOpciones
     width: 350px
     height: 175px
-    border-left: 3px solid black
-    border-right: 3px solid black
-    border-bottom: 3px solid black
+    border-left: 3px solid $Negro
+    border-right: 3px solid $Negro
+    border-bottom: 3px solid $Negro
     display: none
     margin: auto
 
-#pDBaliza
+.pDBaliza
     text-align: center
+.pDBaliza:first-letter
+    text-transform: uppercase
+
 #dBalSele
     margin: auto
 .btnOpciones
     border-radius: 10px 10px 10px 10px
-    border: 1px solid black
+    border: 1px solid $Negro
     background-color: $Azul
     width: 100px
     height: 50px

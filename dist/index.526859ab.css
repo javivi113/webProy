@@ -1,11 +1,68 @@
+.inicioPanel {
+  background-color: #253f85;
+  height: auto;
+  width: 30%;
+  padding: 2%;
+  top: 50px;
+  left: 40%;
+  margin: auto;
+  position: absolute;
+  z-index: 10000;
+}
+.inicioPanel h1 {
+  color: #fbfaf0;
+}
+.inicioPanel span {
+  color: #fbfaf0;
+}
+
+@media screen and (max-width: 1600px) {
+  .inicioPanel {
+    left: 40%;
+  }
+
+  nav {
+    position: fixed;
+    overflow: hidden;
+    background: linear-gradient(0deg, #253f85 0%, #4160e6 90%);
+    height: 50px;
+    top: 0;
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+  }
+  ul img {
+    height: 40px;
+    width: 40px;
+  }
+  ul li {
+    display: inline-block;
+    float: left;
+    color: #fbfaf0;
+    font-size: 25px;
+  }
+  ul li p {
+    text-decoration: none;
+    font-size: 28px;
+    color: #fbfaf0;
+    margin-left: 0rem;
+  }
+  ul li p:hover {
+    font-size: 28px;
+    color: #05140a;
+    cursor: pointer;
+  }
+}
 #dDragMovible {
-  border: 1px solid black;
+  border: 1px solid #05140a;
 }
 
 nav {
   position: fixed;
   overflow: hidden;
-  background: linear-gradient(5deg, #253f85 0%, #4160e6 100%);
+  background: linear-gradient(0deg, #253f85 0%, #4160e6 90%);
   height: 50px;
   top: 0;
   width: 100%;
@@ -20,18 +77,18 @@ nav ul img {
 nav ul li {
   display: inline-block;
   float: left;
-  color: white;
+  color: #fbfaf0;
   font-size: 25px;
 }
 nav ul li p {
   text-decoration: none;
   font-size: 28px;
-  color: white;
+  color: #fbfaf0;
   margin-left: 10rem;
 }
 nav ul li p:hover {
   font-size: 28px;
-  color: black;
+  color: #05140a;
   cursor: pointer;
 }
 
@@ -44,19 +101,19 @@ nav ul li p:hover {
   margin: 55px;
 }
 #dMisSitios ul {
-  color: black;
+  color: #05140a;
   list-style: none;
 }
 #dMisSitios ul li {
   display: inline-block;
   float: left;
-  color: black;
+  color: #05140a;
   font-size: 25px;
   margin-right: 20px;
 }
 #dMisSitios .balizasGuardada {
-  border: 1px solid black;
-  box-shadow: 3px 3px 0px 0px grey;
+  border: 1px solid #05140a;
+  box-shadow: 3px 3px 0px 0px #788287;
   border-radius: 10px;
   margin: 4%;
   text-align: center;
@@ -80,7 +137,7 @@ nav ul li p:hover {
 
 .iconoDragabble:hover {
   font-size: 55px;
-  border: 1px solid black;
+  border: 1px solid #05140a;
   box-shadow: 3px 7px 0px 0px grey;
   border-radius: 10px 10px 10px 10px;
 }
@@ -88,6 +145,7 @@ nav ul li p:hover {
 .dDatoParam {
   margin-top: 1%;
   margin-bottom: 1%;
+  display: none;
 }
 
 .iconoPanel {
@@ -107,7 +165,7 @@ nav ul li p:hover {
 }
 
 #iBasura {
-  color: red;
+  color: #c81e32;
   margin-bottom: 10px;
   float: right;
   font-size: 40px;
@@ -122,22 +180,26 @@ nav ul li p:hover {
 #map {
   width: 900px;
   height: 500px;
-  border: 5px solid black;
+  border: 5px solid #05140a;
   border-radius: 10px;
 }
 
 #dOpciones {
   width: 350px;
   height: 175px;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
-  border-bottom: 3px solid black;
+  border-left: 3px solid #05140a;
+  border-right: 3px solid #05140a;
+  border-bottom: 3px solid #05140a;
   display: none;
   margin: auto;
 }
 
-#pDBaliza {
+.pDBaliza {
   text-align: center;
+}
+
+.pDBaliza:first-letter {
+  text-transform: uppercase;
 }
 
 #dBalSele {
@@ -146,7 +208,7 @@ nav ul li p:hover {
 
 .btnOpciones {
   border-radius: 10px 10px 10px 10px;
-  border: 1px solid black;
+  border: 1px solid #05140a;
   background-color: #4160e6;
   width: 100px;
   height: 50px;
