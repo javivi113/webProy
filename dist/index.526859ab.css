@@ -15,44 +15,9 @@
 .inicioPanel span {
   color: #fbfaf0;
 }
-
 @media screen and (max-width: 1600px) {
   .inicioPanel {
-    left: 40%;
-  }
-
-  nav {
-    position: fixed;
-    overflow: hidden;
-    background: linear-gradient(0deg, #253f85 0%, #4160e6 90%);
-    height: 50px;
-    top: 0;
-    width: 100%;
-  }
-
-  ul {
-    list-style: none;
-  }
-  ul img {
-    height: 40px;
-    width: 40px;
-  }
-  ul li {
-    display: inline-block;
-    float: left;
-    color: #fbfaf0;
-    font-size: 25px;
-  }
-  ul li p {
-    text-decoration: none;
-    font-size: 28px;
-    color: #fbfaf0;
-    margin-left: 0rem;
-  }
-  ul li p:hover {
-    font-size: 28px;
-    color: #05140a;
-    cursor: pointer;
+    left: 55%;
   }
 }
 #dDragMovible {
